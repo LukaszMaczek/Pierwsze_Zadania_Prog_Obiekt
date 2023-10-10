@@ -9,7 +9,7 @@
             //Parzysta();
             //MaxLiczba();
             //RownanieKwadratowe();
-            //ZmianaWaluty(); jeszcze nie działa
+            ZmianaWaluty();
         }
         static void PoleKola()
         {
@@ -108,30 +108,35 @@
                 Console.WriteLine("Rozwiazaniami zespolonymi tego rownania sa x1={0:f2}{1:f2}i, x2={2:f2}+{3:f2}i", x3, xz3, x4, xz4);
             }
         }
-        /*static void ZmianaWaluty()
+        static void ZmianaWaluty()
         {
+            double euro = 4.56;
+            double dolar = 4.32;
+            double korona = 5.36;
+            double przelicz;
             Console.WriteLine("Podaj kwote w zl: ");
             double a = double.Parse(Console.ReadLine());
-            Console.WriteLine("Na jaka walute chcesz zamienic ta kwote (wpisz '1', jesli na euro, '2' jesli na dolary lub '3' jesli na korony czeskie): ");
+            Console.WriteLine("Na jaka walute chcesz zamienic ta kwote? " +
+                "(wpisz '1', jesli na euro, '2' jesli na dolary lub '3' jesli na korony czeskie): ");
             int b = int.Parse(Console.ReadLine());
             switch (b)
             {
                 case 1:
-                    double euro = a / (4.56);
-                    Console.WriteLine("Kwota {0:f) w zl to {1:f2} euro", a, euro);
+                    przelicz = a / euro;
+                    Console.WriteLine("Kwota przeliczona to {0:0.##} euro", przelicz);
                     break;
                 case 2:
-                    double dolar = a / 4.32;
-                    Console.WriteLine("Kwota {0:f) w zl to {1:f2} dolarow", a, dolar);
+                    przelicz = a / dolar;
+                    Console.WriteLine("Kwota przeliczona to" + przelicz + "dolarow");
                     break;
                 case 3:
-                    double korona = a * 5.36;
-                    Console.WriteLine("Kwota {0:f) w zl to {1:f2} koron czeskich", a, korona);
+                    przelicz = a * korona;
+                    Console.WriteLine("Kwota przeliczona to {0:0.##} koron czeskich", przelicz);
                     break;
                 default:
                     Console.WriteLine("Wybrales walute spoza mozliwych do wyboru");
                     break;
             }
-        }*/
+        }
     }
 }
