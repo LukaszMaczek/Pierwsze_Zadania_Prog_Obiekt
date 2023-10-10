@@ -127,7 +127,7 @@
                     break;
                 case 2:
                     przelicz = a / dolar;
-                    Console.WriteLine("Kwota przeliczona to" + przelicz + "dolarow");
+                    Console.WriteLine("Kwota przeliczona to {0:0.##} dolarow", przelicz);
                     break;
                 case 3:
                     przelicz = a * korona;
